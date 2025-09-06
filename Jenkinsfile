@@ -29,7 +29,6 @@ pipeline {
                     }
                     steps {
                         // Unit tests with Vitest
-                        sh 'npm ci'
                         sh 'npx vitest@3.2.4 run --reporter=verbose'
                     }
                 }
@@ -43,7 +42,6 @@ pipeline {
                     }
 
                     steps {
-                        sh 'npm ci'
                         sh 'npx playwright test'
                     }
                 }
@@ -75,7 +73,6 @@ pipeline {
             }
 
             steps {
-                sh 'npm ci'
                 sh 'npx playwright test'
             }
 
